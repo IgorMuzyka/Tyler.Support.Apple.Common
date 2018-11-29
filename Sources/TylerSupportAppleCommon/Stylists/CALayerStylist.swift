@@ -19,7 +19,7 @@ open class CALayerStylist: GenericStylist {
 	public static var keyPath: AnyKeyPath? = \NSView.layer as AnyKeyPath?
 	#endif
 
-    public init() {}
+    public required init() {}
 
     public func style(stylable layer: CALayer, style: CALayerStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {

@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum CALayerStyle: Style {
 
@@ -33,6 +34,11 @@ public enum CALayerStyle: Style {
 	case shadowOffset(Variable<Size>)
 	case shadowRadius(Variable<Number>)
 	case shadowPath(Variable<BezierPath>)
+}
+
+extension CALayerStyle {
+
+    public static var alias: Alias = "CALayerStyle"
 }
 
 extension CALayerStyle: Codable {
